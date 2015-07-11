@@ -1,4 +1,23 @@
 # depslib dependency file v1.0
-1353754660 source:c:\users\mathieu\github\utilitaire\main.cpp
+1436612610 source:c:\users\mathieu\github\utilitaire\main.cpp
+	"./include/include_utilitaire.h"
+
+1436609786 source:c:\users\mathieu\github\utilitaire\src\aide.cpp
+	"../include/aide.h"
+
+1436608971 c:\users\mathieu\github\utilitaire\include\aide.h
+
+1436612274 source:c:\users\mathieu\github\utilitaire\src\complexe.cpp
+	"../include/complexe.h"
+
+1436612687 c:\users\mathieu\github\utilitaire\include\complexe.h
+	"include_utilitaire.h"
+
+1436610564 c:\users\mathieu\github\utilitaire\include\include_utilitaire.h
+	<stdio.h>
+	<stdlib.h>
+	<cstdlib>
 	<iostream>
+	"aide.h"
+	"complexe.h"
 
