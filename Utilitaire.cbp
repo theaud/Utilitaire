@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="include/aide.h" />
 		<Unit filename="include/complexe.h" />
+		<Unit filename="include/include_utilitaire.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/aide.cpp" />
 		<Unit filename="src/complexe.cpp" />
