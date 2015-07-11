@@ -27,7 +27,7 @@
 
     void  complexe::setIm(double Im)    {_im=Im;}
     void  complexe::setRe(double Re)    {_re=Re;}
-    void complexe::setComplexe(double re,double im) { _re=re;_im=im;}
+    void complexe::setcomplexe(double re,double im) { _re=re;_im=im;}
 
      /*********************************************************************************/
      /*****************      Operateur  arithmetique              *********************/
@@ -72,12 +72,12 @@
      /*****************      Operateur   operateur  affichage     *********************/
      /*********************************************************************************/
         // operateur <<
-        ostream& operator<<(ostream& os,const complexe& aComplexe){
-        if(aComplexe.getRe()==0.0 && aComplexe.getIm()==0.0)        {os<<" 0 ";}
-                else if (aComplexe.getIm()==0.0)                    {os<<" "<<aComplexe.getRe();}
-                else if (aComplexe.getRe()==0.0)                    {os<<" "<<aComplexe.getIm()<<"i ";}
-                else if (aComplexe.getIm()>0.0)                     {os<<" "<< aComplexe.getRe() <<"+"<< aComplexe.getIm()<<"i ";}
-                else if (aComplexe.getIm()<0.0)                     {os<<" "<< aComplexe.getRe() << aComplexe.getIm()<<"i ";}
+        ostream& operator<<(ostream& os,const complexe& acomplexe){
+        if(acomplexe.getRe()==0.0 && acomplexe.getIm()==0.0)        {os<<" 0 ";}
+                else if (acomplexe.getIm()==0.0)                    {os<<" "<<acomplexe.getRe();}
+                else if (acomplexe.getRe()==0.0)                    {os<<" "<<acomplexe.getIm()<<"i ";}
+                else if (acomplexe.getIm()>0.0)                     {os<<" "<< acomplexe.getRe() <<"+"<< acomplexe.getIm()<<"i ";}
+                else if (acomplexe.getIm()<0.0)                     {os<<" "<< acomplexe.getRe() << acomplexe.getIm()<<"i ";}
                 else                                                {os <<" Blabla 1";}
           return os;}
 
@@ -92,10 +92,63 @@
             complexe::operator long()      {return (long)  _re; }
 
 
-     /*********************************************************************************/
-     /*****************      Test                                 *********************/
-     /*********************************************************************************/
 
 
 
+/***************************************************************************************************/
+/***************************************************************************************************/
+/************************                 fonction de test             *****************************/
+/***************************************************************************************************/
+/***************************************************************************************************/
 
+//test operateur
+void complexe::test_opetateur1()const
+{
+        int i;
+       complexe a[9];
+
+         a[0].setcomplexe(0.0,0.0);
+         a[1].setcomplexe(0.0,1.0);a[2].setcomplexe(0.0,-1.0);
+         a[3].setcomplexe(1.0,0.0);a[4].setcomplexe(-1.0,0.0);
+
+         a[5].setcomplexe(1.0,1.0);a[6].setcomplexe(1.0,-1.0);
+         a[7].setcomplexe(-1.0,1.0);a[8].setcomplexe(-1.0,-1.0);
+
+   cout <<"------------------------------------------"<<endl;
+   for(i=0;i<9;i++){cout<<a[i]<<endl;}
+   cout <<"------------------------------------------"<<endl;
+
+}
+
+void complexe::test_opetateur2()const
+{    complexe a[3];
+
+         a[0].setcomplexe(0.0,0.0);
+         a[1].setcomplexe(0.0,1.0);
+         a[2].setcomplexe(1.0,0.0);
+    cout <<"------------------------------------------"<<endl;
+    cout <<" test 1 == "<<(bool) (a[0]==a[0])<<endl;
+    cout <<" test 2 == "<<(bool) (a[0]==a[1])<<endl;
+    cout <<" test 3 == "<<(bool) (a[1]==a[1])<<endl;
+    cout <<" test 4 == "<<(bool) (a[2]==a[1])<<endl;
+    cout <<" test 5 == "<<(bool) (a[1]==a[2])<<endl;
+    cout <<"------------------------------------------"<<endl;
+}
+
+void complexe::test_opetateur3()const
+{
+    complexe a[3];
+
+         a[0].setcomplexe(0.0,0.0);
+         a[1].setcomplexe(0.0,1.0);
+         a[2].setcomplexe(1.0,0.0);
+
+    cout <<"------------------------------------------"<<endl;
+    cout <<" test 1 == "<<(bool) (a[0]!=a[0])<<endl;
+    cout <<" test 2 == "<<(bool) (a[0]!=a[1])<<endl;
+    cout <<" test 3 == "<<(bool) (a[1]!=a[1])<<endl;
+    cout <<" test 4 == "<<(bool) (a[2]!=a[1])<<endl;
+    cout <<" test 5 == "<<(bool) (a[1]!=a[2])<<endl;
+    cout <<"------------------------------------------"<<endl;
+
+}

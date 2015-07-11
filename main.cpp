@@ -7,7 +7,7 @@ int main()
 
 
     complexe d;
-    d.setComplexe(10,12.2);
+    d.setcomplexe(10,12.2);
     cout <<"d="<<d<<endl;
 
     complexe a(1.3,1.45);

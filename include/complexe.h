@@ -1,5 +1,5 @@
-#ifndef COMPLEXE_H
-#define COMPLEXE_H
+#ifndef complexe_H
+#define complexe_H
 
 #include "include_utilitaire.h"
 
@@ -17,7 +17,7 @@ class complexe
         double modC(complexe arg1);//=reel²+imaginaire² sert surtout pour comparer
         bool comparaison(double,double);// a faire un template
      /*****************      Get Set                              *********************/
-                    void setComplexe(double re,double im);
+                    void setcomplexe(double re,double im);
             double getIm()const;            void  setIm(double Im);
             double getRe()const;            void  setRe(double poids);
      /*****************      Operateur  arithmetique              *********************/
@@ -40,16 +40,25 @@ class complexe
         friend bool operator!= (const complexe& left, const complexe& right);
 
      /*****************      Operateur   operateur  affichage     *********************/
-        friend ostream& operator<<(ostream& os,const complexe& aComplexe);
+
+        friend ostream& operator<<(ostream& os,const complexe& acomplexe);
+
      /*****************      Operateur  de conversion             *********************/
+
     operator double();       operator int();       operator float();       operator long();
 
      /*****************      Test                                 *********************/
+            void test_opetateur1()const;//test opetateur <<
+            void test_opetateur2()const;//test opetateur ==
+            void test_opetateur3()const;//test opetateur !=
 
-                        // a faire
+           // test opetateur < > <= >= a faire
+           //autre test a faire
 
+
+                    // a faire XD
 
 
 };
 
-#endif // COMPLEXE_H
+#endif // complexe_H
